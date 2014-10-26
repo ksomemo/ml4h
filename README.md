@@ -64,3 +64,23 @@ ml4h
 * lapplyで適用した関数をfixしている fixとは?(メモリ消費量がやばい)
 * fix() は、データを編集するウィンドウを表示する関数である
 * 上記、適用した関数が文字列を要求していたのにfactor(実際integer)を渡していたため問題なしとする
+
+```R
+# 各属性を含むデータフレームとしてアクセス
+typeof(train["job"])
+typeof(train["age"])
+is.factor(train["job"])
+is.factor(train["age"])
+
+# 各属性のみからなるベクトルとしてアクセス
+typeof(train[["job"]])
+typeof(train[["age"]])
+is.factor(train[["job"]])
+is.factor(train[["age"]])
+
+# 上記同様
+typeof(train$job)
+typeof(train$age)
+is.factor(train$job)
+is.factor(train$age)
+```
